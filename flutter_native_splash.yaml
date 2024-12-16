@@ -8,6 +8,5 @@ flutter_native_splash:
     image: assets/images/splash_android12_logo.png
     color: "#ffffff"
 
-    # dart run flutter_native_splash:create --path=flutter_native_splash.yaml
     # frame 640 >> radius 320 >> another frame 960
     # >> but fame with the logo at the center of another frame
