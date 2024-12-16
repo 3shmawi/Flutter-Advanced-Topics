@@ -17,7 +17,6 @@ dependencies:
   # State management
   flutter_bloc: ^8.1.6
   # A build system for Dart code generation and modular compilation.
-  ## dart run build_runner build --delete-conflicting-outputs
   build_runner: ^2.4.13
   # Code generator (mainly used with cubit & retrofit)
   freezed: ^2.4.5
