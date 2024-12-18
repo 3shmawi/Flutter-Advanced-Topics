@@ -6,6 +6,8 @@
 
 # Build runner for Retrofit & json_serializable & freezed
 # -> dart run build_runner build --delete-conflicting-outputs
+//export PATH="/Users/ashmawi/flutter/bin/cache/dart-sdk/bin:/Users/ashmawi/flutter/bin:$PATH"
+
 
 # Run Flavor
 # DEBUG
