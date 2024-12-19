@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dev/features/home/data/apis/home_api_services.dart';
+import 'package:flutter_dev/features/home/data/repo/home_repo.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/login/data/repo/login_repo.dart';
@@ -23,4 +25,8 @@ Future<void> setupGetIt() async {
   // signup
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dev/features/home/data/repo/home_repo.dart';
+import 'package:flutter_dev/features/home/logic/home_cubit.dart';
 
 import '../../features/home/ui/home_screen.dart';
 import '../../features/login/logic/login_cubit.dart';
@@ -37,7 +39,10 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => BlocProvider(
+              create: (context) =>
+                  HomeCubit(getIt<HomeRepo>())..getSpecializations(),
+              child: const HomeScreen()),
         );
       default:
         return MaterialPageRoute(

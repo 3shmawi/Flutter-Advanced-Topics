@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev/features/home/ui/widgets/doctors_recommendations_see_all.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/helpers/spacing.dart';
 import 'widgets/doctors_blue_container.dart';
-import 'widgets/doctors_list_view.dart';
-import 'widgets/doctors_speciality_list_view.dart';
 import 'widgets/doctors_speciality_see_all.dart';
 import 'widgets/home_top_bar.dart';
+import 'widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,14 +13,15 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
           width: double.infinity,
-          margin: EdgeInsets.fromLTRB(
-            20.0.w,
-            16.0.h,
-            20.0.w,
-            28.0.h,
+          margin: const EdgeInsets.fromLTRB(
+            20.0,
+            16.0,
+            20.0,
+            28.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,11 +30,8 @@ class HomeScreen extends StatelessWidget {
               const DoctorsBlueContainer(),
               verticalSpace(24.h),
               const DoctorsSpecialitySeeAll(),
-              verticalSpace(18.h),
-              const DoctorsSpecialityListView(),
-              const DoctorsRecommendationsSeeAll(),
-              verticalSpace(12.h),
-              const DoctorsListView(),
+              verticalSpace(18),
+              const SpecializationsAndDoctorsBlocBuilder(),
             ],
           ),
         ),
