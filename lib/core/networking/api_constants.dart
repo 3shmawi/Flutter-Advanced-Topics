@@ -6,7 +6,7 @@ class ApiConstants {
   static const String signup = "auth/register";
 
   //-----------------Home-----------------//
-  static const String specializationEP = 'specialization/index';
+  static const String specialization = 'specialization/index';
 }
 
 class ApiErrors {
