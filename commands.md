@@ -16,3 +16,8 @@
 # RELEASE
 # -> flutter build apk --release --flavor FLAVOR_NAME --target PATH_FLAVOR_MAIN --no-tree-shake-icons
 # -> ex). flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons
+
+
+# test login
+1) test20@gmail.com
+2) Omar@123
