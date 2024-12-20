@@ -1,19 +1,25 @@
-import 'package:flutter_dev/core/networking/api_error_handler.dart';
-import 'package:flutter_dev/features/home/data/models/specializations_response_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../core/networking/api_error_handler.dart';
+import '../data/models/specializations_response_model.dart';
 
 part 'home_state.freezed.dart';
 
 @freezed
-class HomeState<T> with _$HomeState<T> {
+class HomeState with _$HomeState {
   const factory HomeState.initial() = _Initial;
 
+  // Specializations
   const factory HomeState.specializationsLoading() = SpecializationsLoading;
-
   const factory HomeState.specializationsSuccess(
-    SpecializationsResponseModel specializationsResponseModel,
-  ) = SpecializationsSuccess;
-
+          List<SpecializationsData?>? specializationDataList) =
+      SpecializationsSuccess;
   const factory HomeState.specializationsError(ErrorHandler errorHandler) =
       SpecializationsError;
+
+  // Doctors
+  const factory HomeState.doctorsSuccess(List<Doctors?>? doctorsList) =
+      DoctorsSuccess;
+  const factory HomeState.doctorsError(ErrorHandler errorHandler) =
+      DoctorsError;
 }
